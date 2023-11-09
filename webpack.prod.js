@@ -9,12 +9,8 @@ module.exports = merge([
   common,
   {
     mode: 'production',
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-    },
     optimization: {
-      minimize: true,
+      minimize: false,
       minimizer: [
         // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
         // `...`,
