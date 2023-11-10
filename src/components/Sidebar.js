@@ -3,6 +3,8 @@ import { Draggable, Droppable } from 'react-beautiful-dnd';
 
 import {
   controlComponentsNameSpaces,
+  eventsComponentsNameSpaces,
+  looksComponentsNameSpaces,
   motionComponentsNameSpaces,
 } from '../constants/constant';
 import { renderSideBarComponentBasedOnType as renderComponentBasedOnType } from '../helpers/index.helper';
@@ -54,6 +56,74 @@ export default function Sidebar() {
             ref={provided.innerRef}
           >
             {controlComponentsNameSpaces.map((x, i) => {
+              return (
+                <Draggable
+                  key={`${x}-sideArea`}
+                  draggableId={`${x}-sideArea`}
+                  index={i}
+                >
+                  {(provided) => (
+                    <li
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      className='my-2'
+                    >
+                      {renderComponentBasedOnType(x, i)}
+                    </li>
+                  )}
+                </Draggable>
+              );
+            })}
+            {provided.placeholder}
+          </ul>
+        )}
+      </Droppable>
+
+      {/*  Looks sidebar component rendering */}
+      <div className='font-bold'> Look </div>
+      <Droppable droppableId='sidebar-look' type='COMPONENTS'>
+        {(provided) => (
+          <ul
+            className='sideArea-look my-3'
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {looksComponentsNameSpaces.map((x, i) => {
+              return (
+                <Draggable
+                  key={`${x}-sideArea`}
+                  draggableId={`${x}-sideArea`}
+                  index={i}
+                >
+                  {(provided) => (
+                    <li
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      className='my-2'
+                    >
+                      {renderComponentBasedOnType(x, i)}
+                    </li>
+                  )}
+                </Draggable>
+              );
+            })}
+            {provided.placeholder}
+          </ul>
+        )}
+      </Droppable>
+
+      {/*  Events sidebar component rendering */}
+      <div className='font-bold'> Event </div>
+      <Droppable droppableId='sidebar-event' type='COMPONENTS'>
+        {(provided) => (
+          <ul
+            className='sideArea-event my-3'
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {eventsComponentsNameSpaces.map((x, i) => {
               return (
                 <Draggable
                   key={`${x}-sideArea`}

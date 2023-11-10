@@ -19,7 +19,7 @@ const MoveXY = ({ componentId }) => {
 
   return (
     <Paper elevation={3}>
-      <div className='text-center rounded bg-blue-500 p-2 my-3'>
+      <div className='text-center rounded bg-blue-400 p-2 my-3'>
         <div className='grid grid-cols-2 my-2'>
           <div className='text-white'> X</div>
           <input
@@ -46,7 +46,7 @@ const MoveXY = ({ componentId }) => {
         </div>
         <div
           id={componentId}
-          className='text-center bg-blue-700 text-white px-2 py-1 my-2 text-sm cursor-pointer'
+          className='text-center bg-blue-400 text-white px-2 py-1 my-2 text-sm cursor-pointer'
           onClick={() => moveToXY()}
         >
           Go to X : {state.goto_x} Y : {state.goto_y}

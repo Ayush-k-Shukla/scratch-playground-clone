@@ -92,7 +92,7 @@ export default function PreviewArea() {
               dispatch(addSprite());
             }}
           >
-            Create
+            New
           </Button>
         </div>
       </div>
@@ -107,6 +107,14 @@ export default function PreviewArea() {
               onMouseDown={(e) => dragMouseDown(e, `${x.id}-${i}`)}
             >
               <div id={`${x.id}-div`} className='catAnimation'>
+                <div
+                  className='hidden border-2 p-2 ml-3 mb-2 w-auto whitespace-nowrap'
+                  id={x.id + '-message-box'}
+                ></div>
+                <div
+                  className='hidden rounded-full border-2 w-4 left-1/2 h-4 ml-3 mb-2 whitespace-nowrap'
+                  id={x.id + '-think-box1'}
+                ></div>
                 <CatSprite spriteId={x.id} />
               </div>
             </div>

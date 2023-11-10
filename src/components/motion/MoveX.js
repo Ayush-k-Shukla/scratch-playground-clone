@@ -18,7 +18,7 @@ const MoveX = ({ componentId }) => {
     <div>
       <div
         id={componentId}
-        className={`text-center rounded bg-blue-700 text-white p-2 my-2 text-sm cursor-pointer mx-auto`}
+        className={`text-center rounded bg-blue-400 text-white p-2 my-2 text-sm cursor-pointer mx-auto`}
         onClick={handleClick}
       >
         Move X{' '}

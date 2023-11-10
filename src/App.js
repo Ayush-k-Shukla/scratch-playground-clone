@@ -1,3 +1,6 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { Button, Toolbar, Typography } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { useDispatch, useSelector } from 'react-redux';
@@ -66,8 +69,23 @@ export default function App() {
     }
   };
 
+  const goToGithub = () => {
+    window.location.href =
+      'https://github.com/Ayush-k-Shukla/scratch-playground-clone';
+  };
+
   return (
-    <div className='bg-blue-100 pt-6 font-sans'>
+    <div className='bg-blue-100 font-sans'>
+      <AppBar position='sticky' top='0'>
+        <Toolbar>
+          <Typography variant='h5' style={{ flexGrow: 1, fontWeight: 'bold' }}>
+            Scratch Playground
+          </Typography>
+          <Button color='inherit'>
+            <GitHubIcon onClick={goToGithub} />
+          </Button>
+        </Toolbar>
+      </AppBar>
       <div className='h-screen overflow-hidden flex flex-row'>
         <DragDropContext onDragEnd={onDragEnd}>
           <div className='flex-1 h-screen overflow-hidden flex flex-row bg-white border-t border-r border-gray-200 rounded-tr-xl mr-2 z-20'>

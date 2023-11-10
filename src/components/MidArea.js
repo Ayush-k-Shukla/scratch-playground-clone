@@ -104,7 +104,7 @@ export default function MidArea() {
             startIcon={<AddCircleOutline />}
             onClick={addANewRunnableBlockContainer}
           >
-            Add Block
+            New Block
           </Button>
         </div>
       </div>

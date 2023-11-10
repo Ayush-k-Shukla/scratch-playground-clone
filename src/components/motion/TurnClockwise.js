@@ -36,7 +36,7 @@ const TurnClockWise = ({ componentId }) => {
         </div>
         <div
           id={componentId}
-          className={`flex bg-blue-700 text-white px-2 py-1 mt-3 mb-1 text-sm cursor-pointer text-center`}
+          className={`flex bg-blue-400 text-white px-2 py-1 mt-3 mb-1 text-sm cursor-pointer text-center`}
           onClick={() => handleClick()}
         >
           <div className='flex mx-auto'>

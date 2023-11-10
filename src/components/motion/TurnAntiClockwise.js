@@ -38,7 +38,7 @@ const TurnAntiClockWise = ({ componentId }) => {
         </div>
         <div
           id={componentId}
-          className={`flex bg-blue-700 text-white px-2 py-1 mt-3 mb-1 text-sm cursor-pointer`}
+          className={`flex bg-blue-400 text-white px-2 py-1 mt-3 mb-1 text-sm cursor-pointer`}
           onClick={() => handleClick()}
         >
           <div className='flex mx-auto'>

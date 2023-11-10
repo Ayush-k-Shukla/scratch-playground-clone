@@ -7,3 +7,16 @@ export const motionComponentsNameSpaces = [
 ];
 
 export const controlComponentsNameSpaces = ['WAIT', 'REPEAT'];
+
+export const looksComponentsNameSpaces = [
+  'SAY_MESSAGE',
+  'SAY_MESSAGE_WITH_TIMER',
+  'THINK_MESSAGE',
+  'THINK_MESSAGE_WITH_TIMER',
+  'HIDE_MESSAGE',
+  'SPRITE_SIZE',
+  'SHOW_SPRITE',
+  'HIDE_SPRITE',
+];
+
+export const eventsComponentsNameSpaces = ['BROADCAST'];
